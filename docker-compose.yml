@@ -1,0 +1,20 @@
+version: '3'
+services:
+    todo-backend:
+        image: levomatohse/springlab
+        ports:
+        - 8080:8080
+        container_name: todo-app-composed
+        links:
+        - "mysqldb:mysql"
+
+    mysqldb:
+        image: mysql:latest
+        container_name: mysqldb-composed
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: todo-app
+
+
+
+

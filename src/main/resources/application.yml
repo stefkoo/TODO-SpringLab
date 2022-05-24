@@ -6,12 +6,12 @@ server:
 spring:
   datasource:
     password: root
-    url: jdbc:mysql://localhost:52000/todoapp
     username: root
+    url: jdbc:mysql://mysqldb:3306/todo-app
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
